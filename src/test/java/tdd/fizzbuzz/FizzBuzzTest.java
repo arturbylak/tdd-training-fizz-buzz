@@ -1,10 +1,16 @@
 package tdd.fizzbuzz;
 
-import org.junit.Assert;
 import org.junit.Test;
 import tdd.fizbuzz.FizzBuzz;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class FizzBuzzTest {
+    private static final String FIZZ = "Fizz";
+    private static final String BUZZ = "Buzz";
+    private static final String FIZZ_BUZZ = FIZZ + BUZZ;
+
     private FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Test
@@ -16,7 +22,7 @@ public class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(number);
 
         //then
-        Assert.assertTrue(result.isEmpty());
+        assertTrue(result.isEmpty());
     }
 
     @Test
@@ -28,7 +34,7 @@ public class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(number);
 
         //then
-        Assert.assertTrue(result.isEmpty());
+        assertTrue(result.isEmpty());
     }
 
     @Test
@@ -40,8 +46,7 @@ public class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(number);
 
         //then
-        String expectedResult = "Fizz";
-        Assert.assertEquals(expectedResult, result);
+        assertEquals(FIZZ, result);
     }
 
     @Test
@@ -53,8 +58,7 @@ public class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(number);
 
         //then
-        String expectedResult = "Buzz";
-        Assert.assertEquals(expectedResult, result);
+        assertEquals(BUZZ, result);
     }
 
     @Test
@@ -66,7 +70,6 @@ public class FizzBuzzTest {
         String result = fizzBuzz.fizzBuzz(number);
 
         //then
-        String expectedResult = "FizzBuzz";
-        Assert.assertEquals(expectedResult, result);
+        assertEquals(FIZZ_BUZZ, result);
     }
 }
