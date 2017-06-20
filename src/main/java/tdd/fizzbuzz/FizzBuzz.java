@@ -1,9 +1,9 @@
-package tdd.fizbuzz;
+package tdd.fizzbuzz;
 
 public class FizzBuzz {
 
-    private static final String FIZZ = "Fizz";
-    private static final String BUZZ = "Buzz";
+    static final String FIZZ = "Fizz";
+    static final String BUZZ = "Buzz";
 
     public String fizzBuzz(int number) {
 

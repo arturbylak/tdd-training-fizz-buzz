@@ -1,14 +1,13 @@
 package tdd.fizzbuzz;
 
 import org.junit.Test;
-import tdd.fizbuzz.FizzBuzz;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static tdd.fizzbuzz.FizzBuzz.BUZZ;
+import static tdd.fizzbuzz.FizzBuzz.FIZZ;
 
 public class FizzBuzzTest {
-    private static final String FIZZ = "Fizz";
-    private static final String BUZZ = "Buzz";
     private static final String FIZZ_BUZZ = FIZZ + BUZZ;
 
     private FizzBuzz fizzBuzz = new FizzBuzz();
